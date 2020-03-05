@@ -1,45 +1,44 @@
-# Container Lifecycle Commands
-==Syntax:== docker container <container-state> <container-id> (or) <container-name>
-:::info
-Note: we can find container id using “docker ps –a ” command
-:::
 
+# Portainer Docker Container
+> Installation
+```bash=
+docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --name portainer portainer/portainer
+```
+> Validation: 
+http://docker000.westeurope.cloudapp.azure.com:9000
+
+# Other Docker Commands:
 :::spoiler
-> [color=#757575] Stop
+>Login
 ```bash=
-docker container stop my_first_container
+docker login
+```
+Note: Enter docker hub credentials.
+Creds: gaptech/GapTech@123
+
+>Logout
+```bash=
+docker logout
 ```
 
-> [color=#66b032] Start
+>Logs
 ```bash=
-docker container start my_first_container
+docker container logs –f <container-id>
 ```
-> [color=#3cd070] Restart
-```bash=
-docker container restart my_first_container
-```
+Note: Running a container without detach flag show logs.
 
-> [color=#8b0000] Kill
+>Info
 ```bash=
-docker container kill my_first_container
+docker info
 ```
-> [color=#ffb300] Pause
-```bash=
-docker container pause my_first_container
-```
+Note: Display all docker information like containers running
 
-> [color=#48d1cc] Unpause
+>Exec
 ```bash=
-docker container unpause my_first_container
+docker container exec -it <container-id> /bin/bash
 ```
+Note: To log into container bash
+Note: Enter “exit” command to get out from the container.
 
-> [color=#ff0000] Remove
-```bash=
-docker container rm -f my_first_container
-```
-
-> [color=#ff0000] Remove All Containers
-```bash=
-docker container rm -f  $(docker ps -aq)
-```
 :::

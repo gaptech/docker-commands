@@ -1,0 +1,37 @@
+# Docker Lab Setup
+> [color=#00bfff] **Linux Ubuntu VM Hostnames**
+```
+docker001.westeurope.cloudapp.azure.com
+docker002.westeurope.cloudapp.azure.com
+docker003.westeurope.cloudapp.azure.com
+..
+..
+..
+docker035.westeurope.cloudapp.azure.com
+```
+
+> [color=#00bfff] **Connect From Windows/Mac**
+HostName: docker00X.westeurope.cloudapp.azure.com
+Username: ubuntu
+Password: DockerUser@123
+
+==Syntax:== ssh <username>@<hostname>
+
+> Example
+
+```bash=
+ssh ubuntu@docker000.westeurope.cloudapp.azure.com
+```
+
+:::info
+:bulb: Note: Type 'yes' for 1st time login with ssh and enter password
+:::
+
+:::spoiler 
+**Mac:**
+1. Open ==Terminal== and execute above commands
+
+**Windows:**
+1. Connect from [Putty](https://www.putty.org/) or [Chrome Secure shell](https://chrome.google.com/webstore/detail/secure-shell-app/pnhechapfaindjhompbnflcldabbghjo/related?hl=en)
+
+:::

@@ -1,0 +1,27 @@
+# Docker Environmental Variables
+:::info
+==Syntax:== docker container run -d -p 8080:8080 -e key=value   -e key=value --name image-name gaptech/dockerdemo
+:::
+
+## Run RabbitMQ Container with ENV’s
+> without ENV variables:
+```bash=
+docker container run -d -p 8091:15672 --name rabbitmq rabbitmq:3-management
+```
+:::info
+RabbitMQ docker container will be launched with default creds i.e., guest/guest
+:::
+
+> Validation:
+http://docker000.westeurope.cloudapp.azure.com:8091
+
+> with ENV variables:
+```bash=
+docker container run -d -p 8092:15672 --name rabbitmq-with-env -e RABBITMQ\DEFAULT_USER=gaptech -e RABBITMQ_DEFAULT_PASS=gaptech rabbitmq:3-management
+```
+:::info
+Note: Note: RabbitMQ docker container will be launched with custom creds i.e., gaptech/gaptech
+:::
+
+> Validation:
+http://docker000.westeurope.cloudapp.azure.com:8092

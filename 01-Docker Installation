@@ -1,0 +1,20 @@
+# Docker Installation
+Mac: [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+Windows: [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+Linux: 
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
+```
+:::spoiler 
+**Installation Steps for Mac/Windows:**
+1. Download Windows/Mac docker installable from above links.
+2. Install dmg/exe files by following on-screen instructions and provide credentials If needed.
+
+**Installation Steps for Linux Ubuntu:**
+1. Execute above commands in Linux Terminal.
+:::

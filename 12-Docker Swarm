@@ -1,0 +1,59 @@
+# Creating a Docker Swarm Cluster
+Step1: Get the IP address of VM using below command
+```bash=
+curl ifconfig.co
+```
+	   
+Step2: 
+```bash=
+Syntax: docker swarm init --advertise-addr=<leader-node-ip-address>
+
+Example: docker swarm init --advertise-addr=192.168.0.23
+```
+
+Step3:
+```bash=
+docker swarm join --token <swarm-token> <leader-node-ip>:<generated-port>
+```
+Step4:
+```bash=
+docker node ls
+```
+
+## Deploy Docker Container in Swarm Cluster
+```bash=
+Syntax: docker service create -d -p <port> --name <name-of-service> --replicas=<count>   <image-name>
+
+Example1: docker service create -d -p 8090:8090 --name swarmtest --replicas=5 gaptech/dockerdemo
+
+Example2: docker service create -d -p 8091:80 --name springbootservice --replicas=5  gaptech/springbootapp
+```
+
+```bash=
+Command: docker service ls
+```
+
+```bash=
+Command: docker ps -a
+```
+
+```bash=
+Syntax: docker service ps <service-name>
+
+Command: docker service ps swarmtest
+```
+
+## Scaling Docker Services in Swarm
+Scaling UP
+```bash=
+Syntax: docker service scale <service-name>=<new-count>
+
+Example: docker service scale swarmtest=10
+```
+Scaling Down
+```bash=
+Example: docker service scale swarmtest=2
+```
+Removing
+```bash=
+Example: docker service rm swarmtest

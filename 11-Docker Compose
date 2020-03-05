@@ -1,0 +1,18 @@
+# Docker Compose
+:::spoiler
+[Docker Compose File GitLink](https://github.com/gaptech/DockerFiles/blob/master/docker-compose.yaml)
+```bash=
+docker compose up –d
+```
+Note:
+File name should be docker-compose.yaml (or) docker-compose.yml
+
+Docker Compose - Example
+Example DockerCompose: [WordPress Docker Compose File](https://docs.docker.com/compose/wordpress/)
+Step1: create a file with docker-compose.yml and paste the above sample compose file
+Step2: Execute the below command
+```bash=
+Command: docker-compose up -d
+```
+Step3: Validate Docker containers from UI
+:::

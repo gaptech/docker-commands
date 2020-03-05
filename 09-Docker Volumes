@@ -1,0 +1,28 @@
+# Docker Volumes
+==Syntax:== docker volume create <docker-volume-name> 
+:::info
+Example: docker volume create volume1
+:::
+
+## Jenkins Docker Container
+```bash=
+docker volume create jenkins_home
+docker run -p 8085:8080 -v jenkins_home:/var/jenkins_home --name jenkins jenkins/jenkins:lts
+```
+
+**Validation:** Jenkins should be accessible
+http://docker000.westeurope.cloudapp.azure.com:8085/
+> Case1: Remove the Container and Rerun the container
+```bash=
+docker container rm -f jenkins
+docker run -p 8085:8080 -v jenkins_home:/var/jenkins_home --name jenkins jenkins/jenkins:lts
+```
+**Validation:** Previous Jobs should Exist
+http://docker000.westeurope.cloudapp.azure.com:8085/
+> Case2: Run another container without volume, different port & different container name
+```bash=
+docker run -p 8086:8080 --name jenkins-without-volume jenkins/jenkins:lts
+```
+**Validation:** Fresh Jenkins setup in 8086 port
+http://docker000.westeurope.cloudapp.azure.com:8085/
+http://docker000.westeurope.cloudapp.azure.com:8086/
