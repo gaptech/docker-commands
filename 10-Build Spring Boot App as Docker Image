@@ -34,8 +34,8 @@ docker ps -a
 ```
 Validation:
 ```bash=
-URL: [http://localhost:8090](http://localhost:8090/)
-URL: http://localhost:8090/hellodocker
+URL: [http://docker001.centralus.cloudapp.azure.com:8090](http://localhost:8090/)
+URL: http://docker001.centralus.cloudapp.azure.com:8090/hellodocker
 ```
 
 ## Pushing Docker Images to Docker Hub

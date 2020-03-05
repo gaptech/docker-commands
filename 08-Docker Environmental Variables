@@ -13,7 +13,7 @@ RabbitMQ docker container will be launched with default creds i.e., guest/guest
 :::
 
 > Validation:
-http://docker000.westeurope.cloudapp.azure.com:8091
+http://docker001.centralus.cloudapp.azure.com:8091
 
 > with ENV variables:
 ```bash=
@@ -24,4 +24,4 @@ Note: Note: RabbitMQ docker container will be launched with custom creds i.e., g
 :::
 
 > Validation:
-http://docker000.westeurope.cloudapp.azure.com:8092
+http://docker001.centralus.cloudapp.azure.com:8092

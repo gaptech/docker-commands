@@ -1,13 +1,18 @@
 # Docker Lab Setup
 > [color=#00bfff] **Linux Ubuntu VM Hostnames**
+
 ```
 docker001.westeurope.cloudapp.azure.com
 docker002.westeurope.cloudapp.azure.com
 docker003.westeurope.cloudapp.azure.com
 ..
 ..
-..
-docker035.westeurope.cloudapp.azure.com
+docker009.westeurope.cloudapp.azure.com
+
+docker001.eastus.cloudapp.azure.com
+docker001.eastus2.cloudapp.azure.com
+docker001.westus.cloudapp.azure.com
+docker001.westus2.cloudapp.azure.com
 ```
 
 > [color=#00bfff] **Connect From Windows/Mac**

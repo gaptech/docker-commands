@@ -8,5 +8,5 @@ docker container run -d -p 8082:80 --name my_first_container gaptech/dockerdemo
 docker ps -a
 ```
 > Validation
-http://docker000.westeurope.cloudapp.azure.com:8082
-http://docker000.westeurope.cloudapp.azure.com:8082/welcome.html
+http://docker001.centralus.cloudapp.azure.com:8082
+http://docker001.centralus.cloudapp.azure.com:8082/welcome.html
